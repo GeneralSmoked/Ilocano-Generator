@@ -1,8 +1,8 @@
 import os
 import re
 
-INPUT_DIR = r"C:\Users\Rosh\Documents\GitHub\Ilocano Generator\corpus_work"
-OUTPUT_DIR = r"C:\Users\Rosh\Documents\GitHub\Ilocano Generator\corpus_work_cleaned"
+INPUT_DIR = r"C:\Users\Rosh\Documents\GitHub\Ilocano-Generator\corpus_work"
+OUTPUT_DIR = r"C:\Users\Rosh\Documents\GitHub\Ilocano-Generator\corpus_work_cleaned"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
