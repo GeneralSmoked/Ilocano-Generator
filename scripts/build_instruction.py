@@ -7,6 +7,8 @@ OUTPUT_FILE = r"C:\Users\Rosh\Documents\GitHub\Ilocano-Generator\data\instructio
 
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
+TARGET_DOMAINS = {"religion", "news", "literary"}
+
 INSTRUCTION_TEMPLATES = [
     "Ipadagos ti teksto a mangrugi iti daytoy a linia.",
     "Kumpletuen ti sumaruno a teksto.",
@@ -14,7 +16,7 @@ INSTRUCTION_TEMPLATES = [
     "Ipadagos ti pakasaritaan a mangrugi iti daytoy.",
     "Ipadagos ti naisurat a teksto."
 ]
-MAX_SAMPLES = 150_000
+MAX_SAMPLES = 100_000
 count = 0
 
 with open(INPUT_FILE, 'r', encoding="utf-8") as fin, \
@@ -25,6 +27,9 @@ with open(INPUT_FILE, 'r', encoding="utf-8") as fin, \
             break
 
         record = json.loads(line)
+        domain = record.get("domain")
+        if domain not in TARGET_DOMAINS:
+            continue
         instruction = random.choice(INSTRUCTION_TEMPLATES)
 
         data = {

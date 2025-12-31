@@ -30,8 +30,8 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as fout:
 
                 record = {
                     "domain": domain,
-                    "prompt": prompt,
-                    "continuation": continuation
+                    "prompt": f"<bos> {prompt}",
+                    "continuation": f"{continuation} <eos>"
                 }
 
                 fout.write(json.dumps(record, ensure_ascii=False) + "\n")
