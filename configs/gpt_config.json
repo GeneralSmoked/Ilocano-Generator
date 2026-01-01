@@ -1,0 +1,12 @@
+{
+    "model_name": "distilgpt2",
+    "max_length": 128,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 5e-5,
+    "num_train_epochs": 1,
+    "warmup_steps": 100,
+    "logging_steps": 50,
+    "save_steps": 1000,
+    "fp16": false
+}
