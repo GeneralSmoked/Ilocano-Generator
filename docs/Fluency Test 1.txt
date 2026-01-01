@@ -1,0 +1,29 @@
+PLAIN LM TEST CASE:
+
+TEST A: FLUENCY TEST
+PROMPTS USED:
+    1."<bos> Annungen daguiti amaen"
+    2."<bos> Annong iti balasang"
+    3."<bos> Ti Dios tenglennat pigsa ti tao"
+    4."<bos> Surutem ti nalinteg a dalan"
+    5."<bos> Iti panagbiag ti tao"
+TEST RESULTS:
+    1. [CLS] <bos> annungen daguiti amaen [SEP] wenno tao a ti pagarian. 1 corinto 15231 7 ) wen masapul a maawatan manen dagiti nagannak kadakayo no apay a naimbag ta adda latta la ketdi makita nga ibagada iti dios ken saan a dayta ket adadda pay gayam a matay? 10 lucas 49 8 1521 2 enero 31 229
+    2. [CLS] <bos> annong iti balasang [SEP]e ti gobierno. 2 corinto 1115 ) kasta met dagiti tattao kadagiti umili a di makapagatang ken jehova gapu ta daytoy ti kasayaatan nga interesda ngem saan unay a kasta ti tao wenno agaramid kadagiti amin a nasion. 3 ket no kaanonto pay a kayat ti adu a tao. 4 ania kadi
+    3. [CLS] <bos> ti dios tenglennat pigsa ti tao [SEP]ek ti anak ti amin a banag. ket isu dayta met laeng nga aldaw ta iti sabali a balay dagiti umili ni jehova saan metten a kanayon kenkuana kas propeta ken babbai masapul a maaramid koma kadakayo idi babaen kadagiti lallaki no di pay ita kitaemda agingga itoy a tiempo inton bigat kinuna ni aaron tapno mailaon
+    4. [CLS] <bos> surutem ti nalinteg a dalan [SEP] ket mabalin a nasayaat ti adadda pay nga agserbi ken jehova. no kasta met koma iti agnanayon maipapan itoy ngem saan laeng kadagiti sasaomi isu a saan a gapu ta dida makita amin dagidiay adu a tattao dagiti ubbing. 17 dayta kano idi umuna ketdi kadatayoyo daytoy kadakuada tapno mailigat ida iti maysa a nasion
+    5. [CLS] <bos> iti panagbiag ti tao [SEP]na iti maysa nga ubing. ( galacia9 ) ket saan a kanayon nga agnanayon ken awan iti aniaman a desision. 1 timoteo 315 231776108 2 million ngem kalpasan dayta met la unay no asino kadagiti napulotan ni jehova ta adda koma dagiti annakda ti pudno a dios. 8
+
+CONLCUSION
+- most outputs are grammatical ilocano
+- proper usage of particles
+- awkward repetitions but generally coherent
+- tends to insert biblical references
+    - heavy presence of religion domain
+    - distilgpt2 pretraining data influences
+- coherence is okay but output drifts towards religious or numeric data
+- repitition of numbers and some irrelevant sequences
+- [CLS]/[SEP] tokens appear, must filtered or mapped for clean generation
+- model respects prompt content 
+- LM has learned general structure of ilocano and domain style
+
